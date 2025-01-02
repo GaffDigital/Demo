@@ -1,0 +1,70 @@
+import React from 'react';
+import { DollarSign, Globe, RefreshCw, FileText } from 'lucide-react';
+import PricingCard from '../components/PricingCard';
+
+const Pricing = () => {
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h1 className="text-4xl font-bold text-white text-center mb-12">Pricing</h1>
+      
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <PricingCard title="One-Time Costs" icon={DollarSign}>
+          <div className="space-y-4 text-gray-200">
+            <div className="flex justify-between items-center">
+              <span>Base Package (4 pages)</span>
+              <span className="font-bold">$350.00</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span>Additional Pages</span>
+              <span className="font-bold">$200.00/page</span>
+            </div>
+            <p className="text-sm text-gray-400 mt-2">
+              Perfect for small to medium-sized websites. Includes responsive design and optimization.
+            </p>
+          </div>
+        </PricingCard>
+
+        <PricingCard title="Monthly Services" icon={Globe}>
+          <div className="space-y-4 text-gray-200">
+            <div className="flex justify-between items-center">
+              <span>Domain Name & Hosting</span>
+              <span className="font-bold">$35.00/month</span>
+            </div>
+            <p className="text-sm text-gray-400 mt-2">
+              Includes domain registration, secure hosting, and SSL certificate.
+            </p>
+          </div>
+        </PricingCard>
+
+        <PricingCard title="Website Updates" icon={RefreshCw}>
+          <div className="space-y-4 text-gray-200">
+            <div className="flex justify-between items-center">
+              <span>Included Updates</span>
+              <span className="font-bold">4/year</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span>Additional Updates</span>
+              <span className="font-bold">$150.00/update</span>
+            </div>
+            <p className="text-sm text-gray-400 mt-2">
+              Keep your website fresh and up-to-date with regular content updates.
+            </p>
+          </div>
+        </PricingCard>
+
+        <PricingCard title="What's Included" icon={FileText}>
+          <ul className="list-disc list-inside space-y-2 text-gray-200">
+            <li>Responsive Design</li>
+            <li>SEO Optimization</li>
+            <li>Contact Forms</li>
+            <li>Mobile-Friendly</li>
+            <li>Performance Optimization</li>
+            <li>Technical Support</li>
+          </ul>
+        </PricingCard>
+      </div>
+    </div>
+  );
+};
+
+export default Pricing;
